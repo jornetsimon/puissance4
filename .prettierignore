@@ -1,0 +1,10 @@
+.idea/
+dist/
+assets/
+browserslist
+package*.json
+.gitignore
+.prettierignore
+angular.json
+*.ico
+README.md
