@@ -1,0 +1,36 @@
+<h1 i18n class="title">Players</h1>
+<form [formGroup]="form" (ngSubmit)="submit(form.value)">
+	<div class="players">
+		<mat-card>
+			<mat-form-field>
+				<mat-label i18n>Select a color for player 1</mat-label>
+				<input matInput type="color" formControlName="player1" />
+			</mat-form-field>
+			<div class="player">
+				<div class="player__intro">You are</div>
+				<div class="player__name" [style.color]="player1ColorFc.value">
+					{{ player1Name$ | async }}
+				</div>
+			</div>
+		</mat-card>
+		<div class="players__versus">VS</div>
+		<mat-card>
+			<mat-form-field>
+				<mat-label i18n>Select a color for player 2</mat-label>
+				<input matInput type="color" formControlName="player2" />
+			</mat-form-field>
+
+			<div class="player">
+				<div class="player__intro">You are</div>
+				<div class="player__name" [style.color]="player2ColorFc.value">
+					{{ player2Name$ | async }}
+				</div>
+			</div>
+		</mat-card>
+	</div>
+	<div class="play-button">
+		<button type="submit" [disabled]="form.invalid" mat-raised-button color="primary" i18n>
+			Play
+		</button>
+	</div>
+</form>

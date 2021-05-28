@@ -1,0 +1,15 @@
+mat-toolbar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header__right {
+	& > *:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+.header__author {
+	font-size: 14px;
+	font-weight: normal;
+	opacity: 0.85;
+}

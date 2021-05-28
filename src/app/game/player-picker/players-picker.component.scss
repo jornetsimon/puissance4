@@ -1,0 +1,45 @@
+@import 'src/variables';
+
+.title {
+	text-align: center;
+	color: $primary;
+}
+.players {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+	}
+
+	& > * {
+		margin: 10px;
+	}
+
+	.players__versus {
+		font-size: 24px;
+		color: rgba(0, 0, 0, 0.54);
+	}
+}
+
+.player {
+	text-align: center;
+	.player__intro {
+		font-size: 12px;
+		color: darkgrey;
+	}
+	.player__name {
+		font-size: 1.25em;
+		font-weight: bold;
+		margin: 0.25em 0;
+	}
+}
+
+.play-button {
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
