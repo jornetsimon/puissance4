@@ -1,5 +1,5 @@
 import { Action, State, StateContext } from '@ngxs/store';
-import { StartGame, SwitchTurn } from './game.actions';
+import { ResetGame, StartGame, SwitchTurn } from './game.actions';
 import { Player } from '@model/player';
 import { Injectable } from '@angular/core';
 import { GameService } from '../../app/game/game.service';
@@ -55,5 +55,17 @@ export class GameState {
 				next: upcomingPlayer,
 			});
 		}
+	}
+
+	@Action(ResetGame)
+	public reset(ctx: StateContext<GameStateModel>) {
+		ctx.patchState({
+			started: false,
+			player1: undefined,
+			player2: undefined,
+			next: undefined,
+			ended: false,
+			winner: undefined,
+		});
 	}
 }

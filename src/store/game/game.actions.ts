@@ -10,3 +10,6 @@ export class SwitchTurn {
 export class CheckWinner {
 	public static readonly type = '[Game] Checking for a winner';
 }
+export class ResetGame {
+	public static readonly type = '[Game] Resetting';
+}

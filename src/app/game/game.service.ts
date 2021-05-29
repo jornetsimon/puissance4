@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Player } from '@model/player';
 import { Select, Store } from '@ngxs/store';
-import { StartGame, SwitchTurn } from '../../store/game/game.actions';
+import { ResetGame, StartGame, SwitchTurn } from '../../store/game/game.actions';
 import { Grid } from '@model/grid';
 import { Router } from '@angular/router';
 import { first, switchMap, tap } from 'rxjs/operators';
@@ -15,7 +15,6 @@ import { ColumnIndex } from '@model/column';
 export class GameService {
 	grid: Grid<string, string>;
 	@Select((state) => state.game.started) started$: Observable<boolean>;
-
 	@Select((state) => state.game.next) turn$: Observable<Player>;
 	@Select((state) => state.game.winner) winner$: Observable<Player | undefined>;
 	@Select((state) => state.game) state$: Observable<GameStateModel>;
@@ -46,5 +45,9 @@ export class GameService {
 			tap((player) => this.grid.placeCoin(player.color, columnIndex as ColumnIndex)),
 			switchMap(() => this.store.dispatch([new SwitchTurn()]))
 		);
+	}
+
+	reset() {
+		return this.store.dispatch([new ResetGame()]);
 	}
 }

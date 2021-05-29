@@ -5,6 +5,7 @@ import { isColumnIndex } from '@model/column';
 import { filter } from 'rxjs/operators';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import confetti from 'canvas-confetti';
+import { Router } from '@angular/router';
 
 @UntilDestroy()
 @Component({
@@ -14,7 +15,7 @@ import confetti from 'canvas-confetti';
 	changeDetection: ChangeDetectionStrategy.Default,
 })
 export class GameComponent {
-	constructor(public gameService: GameService) {
+	constructor(public gameService: GameService, private router: Router) {
 		this.gameService.winner$
 			.pipe(
 				filter((winner) => !!winner),
@@ -25,10 +26,6 @@ export class GameComponent {
 			});
 	}
 
-	get grid() {
-		return this.gameService.grid;
-	}
-
 	onPlayersSelected(players: [Player, Player]) {
 		this.gameService.startGame(players).subscribe();
 	}
@@ -37,5 +34,10 @@ export class GameComponent {
 		if (isColumnIndex(colIndex)) {
 			this.gameService.placeCoin(colIndex).subscribe();
 		}
+	}
+
+	playAgain() {
+		this.gameService.reset();
+		this.router.navigateByUrl('/play');
 	}
 }
