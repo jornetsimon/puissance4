@@ -31,4 +31,7 @@ export class Column extends SlotLine {
 	}
 }
 
-export type ColumnIndex = 0 | 1 | 2 | 3 | 4 | 5;
+export type ColumnIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+export function isColumnIndex(n: number): n is ColumnIndex {
+	return [0, 1, 2, 3, 4, 5, 6].includes(n);
+}

@@ -1,4 +1,4 @@
-import { Column } from './column';
+import { Column, isColumnIndex } from './column';
 
 describe('Column', () => {
 	let column: Column;
@@ -30,5 +30,14 @@ describe('Column', () => {
 		column.stackCoin('black');
 		column.stackCoin('black');
 		expect(column.hasCompleteLine()).toEqual('black');
+	});
+});
+
+describe('ColumnIndex', () => {
+	it('should have a guard', () => {
+		expect(isColumnIndex(1)).toBeTrue();
+		expect(isColumnIndex(6)).toBeTrue();
+		expect(isColumnIndex(-1)).toBeFalse();
+		expect(isColumnIndex(10)).toBeFalse();
 	});
 });

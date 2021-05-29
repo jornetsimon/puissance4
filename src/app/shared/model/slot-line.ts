@@ -36,4 +36,11 @@ export abstract class SlotLine {
 		}
 		return false;
 	}
+
+	/**
+	 * Determines if all the slots are filled
+	 */
+	isFull() {
+		return this.slots.every((slot) => slot.isFilled);
+	}
 }

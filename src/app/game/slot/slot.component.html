@@ -1,0 +1,11 @@
+<div class="grid__column__slot">
+	<svg
+		class="grid__column__slot__coin"
+		[class.filled]="slot.isFilled"
+		[attr.fill]="slot.filledBy || defaultColor"
+		viewBox="0 0 100 100"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<circle cx="50" cy="50" r="50" />
+	</svg>
+</div>

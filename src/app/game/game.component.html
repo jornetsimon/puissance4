@@ -1,1 +1,36 @@
-<app-players-picker (playersSelected)="onPlayersSelected($event)"></app-players-picker>
+<ng-container *ngIf="!(gameService.started$ | async); else gridTpl">
+	<app-players-picker (playersSelected)="onPlayersSelected($event)"></app-players-picker>
+</ng-container>
+
+<ng-template #gridTpl>
+	<ng-container *ngIf="gameService.state$ | async as state">
+		<div class="grid">
+			<app-column
+				*ngFor="let column of grid?.columns; let idx = index"
+				[column]="column"
+				[nextColor]="state.next?.color"
+				(selected)="onColumnSelected(idx)"
+			>
+			</app-column>
+		</div>
+		<div class="game-status">
+			<ng-container *ngIf="state.ended; else nextTurnTpl">
+				<div
+					i18n="@@game.winner"
+					*ngIf="state.winner; else drawTpl"
+					[style.color]="state.winner.color"
+				>
+					{{ state.winner.name }} won ! 🙌🥇🎉
+				</div>
+				<ng-template #drawTpl>
+					<div i18n="@@game.draw" class="game-status__draw">It's a draw 🤷‍♂️</div>
+				</ng-template>
+			</ng-container>
+			<ng-template #nextTurnTpl>
+				<div i18n="@@game.next-turn" [style.color]="state.next.color">
+					{{ state.next.name }}'s turn
+				</div>
+			</ng-template>
+		</div>
+	</ng-container>
+</ng-template>

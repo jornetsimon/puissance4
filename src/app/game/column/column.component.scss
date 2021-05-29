@@ -1,0 +1,30 @@
+.grid__column {
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	height: 100%;
+
+	app-slot {
+		flex: 1 1 auto;
+	}
+
+	.grid__column__arrow {
+		opacity: 0;
+		z-index: -1;
+		transition: opacity 250ms;
+		$arrow-size: 80%;
+		width: $arrow-size;
+		position: absolute;
+		top: -10%;
+		left: calc(50% - #{$arrow-size / 2});
+	}
+	&:hover {
+		cursor: pointer;
+		&:not(.grid__column--locked) .grid__column__arrow {
+			opacity: 1;
+		}
+		&.grid__column--locked {
+			cursor: not-allowed;
+		}
+	}
+}

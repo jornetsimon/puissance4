@@ -1,0 +1,18 @@
+$border-color: #dcf1ff;
+.grid__column__slot {
+	background-color: #f2fdfd;
+
+	border: 1px solid $border-color;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.grid__column__slot__coin {
+		height: 80%;
+		&:not(.filled) {
+			border: 1px dotted $border-color;
+			border-radius: 50%;
+		}
+	}
+}

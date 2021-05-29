@@ -5,3 +5,23 @@
 	align-items: center;
 	height: 100%;
 }
+
+.grid {
+	$inside-border: #dcf1ff;
+	display: flex;
+	flex-direction: row;
+	margin: 40px 20px;
+	width: min(80vmin, 800px);
+
+	app-column {
+		flex: 1 1 auto;
+	}
+}
+
+.game-status {
+	font-size: clamp(19px, 4vw, 35px);
+	font-weight: bold;
+}
+.game-status__draw {
+	color: #383434;
+}

@@ -1,5 +1,4 @@
 import { Grid } from '@model/grid';
-import { ColumnIndex } from '@model/column';
 
 describe('Grid', () => {
 	const instance = new Grid();
@@ -41,6 +40,17 @@ describe('Grid', () => {
 				// 7th coin in the first column
 				grid.placeCoin('blue', 1);
 			}).toThrow();
+		});
+		it('should ignore new coins when there is a winner', () => {
+			const grid = new Grid(['orange', 'red']);
+			grid.placeCoin('red', 0);
+			grid.placeCoin('red', 1);
+			grid.placeCoin('red', 2);
+			grid.placeCoin('red', 3);
+			expect(grid.hasWinner()).toEqual('red');
+			grid.placeCoin('red', 6);
+			expect(grid.rows[0].slots[6].isFilled).toBeFalse();
+			expect(grid.columns[6].slots[0].isFilled).toBeFalse();
 		});
 	});
 
@@ -113,7 +123,7 @@ describe('Grid', () => {
 				if (i === 1 && j === 3) {
 					expect(grid.isFull()).toBeFalse();
 				}
-				grid.placeCoin('grey', i as ColumnIndex);
+				grid.columns[i].slots[j].fill('grey');
 			}
 		}
 		expect(grid.isFull()).toBeTrue();

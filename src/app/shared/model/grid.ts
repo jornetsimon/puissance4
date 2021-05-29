@@ -35,6 +35,9 @@ export class Grid<Player1Color extends string, Player2Color extends string> {
 	 * Place a player coin in a given column
 	 */
 	placeCoin(player: Player1Color | Player2Color, coinColumnIndex: ColumnIndex) {
+		if (this.hasWinner()) {
+			return;
+		}
 		const coinRowIndex = this.columns[coinColumnIndex].stackCoin(player);
 		this.rows[coinRowIndex].slots[coinColumnIndex].fill(player);
 	}
@@ -42,7 +45,7 @@ export class Grid<Player1Color extends string, Player2Color extends string> {
 	/**
 	 * Checks if a diagonal line of coins from the same player exists
 	 */
-	hasCompleteDiagonalLine(): string | false {
+	private hasCompleteDiagonalLine(): string | false {
 		for (let i = 0; i < 7; i++) {
 			for (let j = 0; j < 6; j++) {
 				// For every slot
@@ -112,6 +115,6 @@ export class Grid<Player1Color extends string, Player2Color extends string> {
 	 * (there is not more available)
 	 */
 	isFull(): boolean {
-		return this.columns.every((column) => column.slots.every((slot) => slot.isFilled));
+		return this.columns.every((column) => column.isFull());
 	}
 }
