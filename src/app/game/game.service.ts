@@ -21,6 +21,9 @@ export class GameService {
 
 	constructor(private store: Store, private router: Router) {}
 
+	/**
+	 * Start a new game with two players
+	 */
 	startGame(players: [Player, Player]) {
 		const player1 = players[0];
 		const player2 = players[1];
@@ -39,6 +42,9 @@ export class GameService {
 			);
 	}
 
+	/**
+	 * Add a coin to a given column
+	 */
 	placeCoin(columnIndex: ColumnIndex) {
 		return this.turn$.pipe(
 			first(),
@@ -47,6 +53,9 @@ export class GameService {
 		);
 	}
 
+	/**
+	 * Clear the game state
+	 */
 	reset() {
 		return this.store.dispatch([new ResetGame()]);
 	}

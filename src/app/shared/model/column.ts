@@ -1,6 +1,11 @@
 import { Slot } from '@model/slot';
 import { SlotLine } from '@model/slot-line';
 
+/**
+ * A column of coin slots
+ *
+ * Enables stacking coins and filling slots automatically
+ */
 export class Column extends SlotLine {
 	readonly slots: [Slot, Slot, Slot, Slot, Slot, Slot];
 	constructor() {

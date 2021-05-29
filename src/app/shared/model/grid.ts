@@ -3,6 +3,13 @@ import { Column, ColumnIndex } from '@model/column';
 import { isColor } from '../utilities/color';
 import { Slot } from '@model/slot';
 
+/**
+ * An abstraction layer handling :
+ * - grid model
+ * - player colors
+ * - addition of coins
+ * - winning conditions
+ */
 export class Grid<Player1Color extends string, Player2Color extends string> {
 	readonly rows: [Row, Row, Row, Row, Row, Row];
 	readonly columns: [Column, Column, Column, Column, Column, Column, Column];

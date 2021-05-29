@@ -1,26 +1,28 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./src/app",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
-    "paths": {
-      "@services/*": ["shared/services/*"],
-      "@model/*": ["shared/model/*"]
-    },
-    "strictNullChecks": true,
-    "allowSyntheticDefaultImports": true
-  }
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": "./src/app",
+		"outDir": "./dist/out-tsc",
+		"sourceMap": true,
+		"declaration": false,
+		"downlevelIteration": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"importHelpers": true,
+		"target": "es2015",
+		"module": "es2020",
+		"lib": ["es2018", "dom"],
+		"paths": {
+			"@services/*": ["shared/services/*"],
+			"@model/*": ["shared/model/*"]
+		},
+		"strictNullChecks": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"angularCompilerOptions": {
+		"strictTemplates": true,
+		"strictNullChecks": true,
+		"strictInjectionParameters": true
+	}
 }

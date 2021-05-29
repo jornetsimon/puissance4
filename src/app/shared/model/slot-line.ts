@@ -1,7 +1,13 @@
 import { Slot } from '@model/slot';
 
+/**
+ * Represents a line of slots, vertical or horizontal
+ */
 export abstract class SlotLine {
 	slots: Array<Slot>;
+	/**
+	 * The number of consecutive filled slot to consider as a complete line
+	 */
 	readonly completeLineLength = 4;
 
 	protected constructor(slotsCount: number) {

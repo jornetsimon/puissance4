@@ -17,6 +17,9 @@ const GAME_ROUTES: Routes = [
 	},
 ];
 
+/**
+ * The game module
+ */
 @NgModule({
 	declarations: [GameComponent, PlayersPickerComponent, ColumnComponent, SlotComponent],
 	imports: [

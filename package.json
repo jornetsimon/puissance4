@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "compodoc -p tsconfig.doc.json -d dist/documentation"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +39,7 @@
     "@angular/cli": "~10.2.3",
     "@angular/compiler-cli": "~10.2.4",
     "@angular/localize": "^10.2.5",
+    "@compodoc/compodoc": "^1.1.11",
     "@ngxs/schematics": "^0.0.1-alpha.5",
     "@types/canvas-confetti": "^1.4.0",
     "@types/jasmine": "~3.5.0",

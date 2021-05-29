@@ -5,6 +5,11 @@ import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { DEVTOOLS_REDUX_CONFIG, LOGGER_CONFIG, OPTIONS_CONFIG, STATES } from './store.config';
 
+/**
+ * The store module
+ *
+ * Includes states and actions related to the app and features logic
+ */
 @NgModule({
 	imports: [
 		CommonModule,
