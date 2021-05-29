@@ -17,6 +17,7 @@ export class GameService {
 	@Select((state) => state.game.started) started$: Observable<boolean>;
 
 	@Select((state) => state.game.next) turn$: Observable<Player>;
+	@Select((state) => state.game.winner) winner$: Observable<Player | undefined>;
 	@Select((state) => state.game) state$: Observable<GameStateModel>;
 
 	constructor(private store: Store, private router: Router) {}
