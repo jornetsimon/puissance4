@@ -10,7 +10,7 @@
 	$inside-border: #dcf1ff;
 	display: flex;
 	flex-direction: row;
-	margin: 40px 20px;
+	margin: 20px;
 	width: min(80vmin, 800px);
 
 	app-column {
@@ -22,6 +22,11 @@
 	font-size: clamp(19px, 4vw, 35px);
 	font-weight: bold;
 	text-align: center;
+	user-select: none;
+
+	.game-status__play-again-button {
+		margin: 1em 0;
+	}
 }
 .game-status__draw {
 	color: #383434;

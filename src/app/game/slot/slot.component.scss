@@ -7,9 +7,10 @@ $border-color: #dcf1ff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex: none;
 
 	.grid__column__slot__coin {
-		height: 80%;
+		margin: min(1.5vw, 10px);
 		&:not(.filled) {
 			border: 1px dotted $border-color;
 			border-radius: 50%;
