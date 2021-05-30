@@ -68,7 +68,9 @@
               ]
             },
             "fr": {
-              "localize": ["fr"]
+              "localize": [
+                "fr"
+              ]
             }
           }
         },
@@ -136,6 +138,10 @@
               "devServerTarget": "puissance4:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

@@ -4,6 +4,10 @@ Technical test for Infomaniak.
 
 An Angular implementation of the game Connect Four (Puissance 4).
 
+## Demo
+
+[https://ng-puissance4.web.app](https://ng-puissance4.web.app)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.

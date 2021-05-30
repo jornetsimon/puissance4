@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ng-puissance4"
+  },
+  "targets": {
+    "ng-puissance4": {
+      "hosting": {
+        "puissance4": [
+          "ng-puissance4"
+        ]
+      }
+    }
+  }
+}

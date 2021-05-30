@@ -1,0 +1,15 @@
+{
+	"hosting": [
+		{
+			"target": "puissance4",
+			"public": "dist/puissance4",
+			"ignore": ["**/.*"],
+			"rewrites": [
+				{
+					"source": "**",
+					"destination": "/fr/index.html"
+				}
+			]
+		}
+	]
+}
