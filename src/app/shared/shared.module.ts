@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { NgxVibrationModule } from 'ngx-vibration';
 
 const components: ReadonlyArray<any> = [];
 const modules: ReadonlyArray<any> = [
@@ -17,6 +18,7 @@ const modules: ReadonlyArray<any> = [
 	MatInputModule,
 	FormsModule,
 	ReactiveFormsModule,
+	NgxVibrationModule,
 ];
 
 @NgModule({

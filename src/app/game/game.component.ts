@@ -6,6 +6,7 @@ import { filter } from 'rxjs/operators';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import confetti from 'canvas-confetti';
 import { Router } from '@angular/router';
+import { NgxVibrationService } from 'ngx-vibration';
 
 @UntilDestroy()
 @Component({
@@ -15,7 +16,11 @@ import { Router } from '@angular/router';
 	changeDetection: ChangeDetectionStrategy.Default,
 })
 export class GameComponent {
-	constructor(public gameService: GameService, private router: Router) {
+	constructor(
+		public gameService: GameService,
+		private router: Router,
+		private vibrationService: NgxVibrationService
+	) {
 		this.gameService.winner$
 			.pipe(
 				filter((winner) => !!winner),
@@ -23,6 +28,7 @@ export class GameComponent {
 			)
 			.subscribe(() => {
 				confetti({ particleCount: 120, spread: 100, origin: { y: 0.8 }, ticks: 300 });
+				this.vibrationService.vibrate([59, 253, 58, 110, 835, 0]);
 			});
 	}
 

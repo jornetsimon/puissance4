@@ -1,4 +1,9 @@
-<div class="grid__column" [class.grid__column--locked]="isLocked()" (click)="onClick()">
+<div
+	class="grid__column"
+	[class.grid__column--locked]="isLocked()"
+	ngxVibration="10"
+	(click)="onClick()"
+>
 	<svg
 		class="grid__column__arrow"
 		[attr.fill]="nextColor"
