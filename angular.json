@@ -13,6 +13,11 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "locales": {
+          "fr": "src/locale/messages.fr.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -61,6 +66,9 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "fr": {
+              "localize": ["fr"]
             }
           }
         },
@@ -73,6 +81,9 @@
           "configurations": {
             "production": {
               "browserTarget": "puissance4:build:production"
+            },
+            "fr": {
+              "browserTarget": "puissance4:build:fr"
             }
           }
         },

@@ -6,12 +6,17 @@ An Angular implementation of the game Connect Four (Puissance 4).
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
+Append `--configuration=fr` to serve with 🇫🇷 locale.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run build:prod` to build the project for production. The build artifacts will be stored in the [dist](./dist) directory.
+
+### Localization
+
+To generate builds for all locales, use `npm run build:prod:localize`.
 
 ## Running unit tests
 

@@ -1,0 +1,84 @@
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file target-language="fr" original="ng2.template" source-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit datatype="html" id="game.winner">
+        <source><x id="INTERPOLATION" equiv-text="      {{ state.winner.n"/> won! 🙌🥇🎉</source>
+        <target><x id="INTERPOLATION" equiv-text="      {{ state.winner.n"/> a gagné ! 🙌🥇🎉</target>
+        <note from="description" priority="1">winner of the game</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/game.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="447a0d005a7c8f91b19e9fcc0d3376754c6846bd" datatype="html">
+        <source>Play again</source>
+        <target>Rejouer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/game.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="game.draw" datatype="html">
+        <source>It's a draw 🤷‍♂️</source>
+        <target>Match nul 🤷‍♂️</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/game.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="game.next-turn">
+        <source><x id="INTERPOLATION" equiv-text="     {{ state.next.na"/>'s turn</source>
+        <target>Au tour de <x id="INTERPOLATION" equiv-text="     {{ state.next.na"/></target>
+        <note from="description" priority="1">next player's turn</note>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/game.component.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="98e285d6085d82109d7f6cdf1d805c21022630e4" datatype="html">
+        <source>Players</source>
+        <target>Joueurs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/player-picker/players-picker.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="57bad3776c80dc1f7a98e20d7a6d8f52bdfceb8c" datatype="html">
+        <source>Select a color for player 1</source>
+        <target>Couleur pour joueur 1</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/player-picker/players-picker.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="player.introduction" datatype="html">
+        <source>You are</source>
+        <target>Vous êtes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/player-picker/players-picker.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/player-picker/players-picker.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f06bd3b653d8326ed3fd05c8f90fdbe55b7d53f4" datatype="html">
+        <source>Select a color for player 2</source>
+        <target>Couleur pour joueur 2</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/player-picker/players-picker.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4fc2e33b7b9f47d0bfdfe3551e182f02c948f775" datatype="html">
+        <source>Play</source>
+        <target>Jouer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/game/player-picker/players-picker.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -6,6 +6,8 @@
     "start": "ng serve",
     "start-hmr": "ng serve --hmr",
     "build": "ng build",
+    "build:prod": "ng build --prod",
+    "build:prod:localize": "ng build --prod --localize",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

@@ -7,7 +7,7 @@
 				<input matInput type="color" formControlName="player1" />
 			</mat-form-field>
 			<div class="player">
-				<div class="player__intro">You are</div>
+				<div class="player__intro" i18n="@@player.introduction">You are</div>
 				<div class="player__name" [style.color]="player1ColorFc.value">
 					{{ player1Name$ | async }}
 				</div>
@@ -21,7 +21,7 @@
 			</mat-form-field>
 
 			<div class="player">
-				<div class="player__intro">You are</div>
+				<div class="player__intro" i18n="@@player.introduction">You are</div>
 				<div class="player__name" [style.color]="player2ColorFc.value">
 					{{ player2Name$ | async }}
 				</div>

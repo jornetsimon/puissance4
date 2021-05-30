@@ -16,7 +16,7 @@
 		<div class="game-status">
 			<ng-container *ngIf="state.ended; else nextTurnTpl">
 				<ng-container *ngIf="state.winner; else drawTpl">
-					<div i18n="@@game.winner" [style.color]="state.winner.color">
+					<div i18n="winner of the game@@game.winner" [style.color]="state.winner.color">
 						{{ state.winner.name }} won! 🙌🥇🎉
 					</div>
 					<button
@@ -35,7 +35,7 @@
 				</ng-template>
 			</ng-container>
 			<ng-template #nextTurnTpl>
-				<div i18n="@@game.next-turn" [style.color]="state.next.color">
+				<div i18n="next player's turn@@game.next-turn" [style.color]="state.next.color">
 					{{ state.next.name }}'s turn
 				</div>
 			</ng-template>
