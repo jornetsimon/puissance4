@@ -11,6 +11,7 @@ $border-color: #dcf1ff;
 
 	& > svg {
 		margin: min(1.5vw, 10px);
+		flex: 1 0 auto;
 	}
 
 	.grid__column__slot__hole {
