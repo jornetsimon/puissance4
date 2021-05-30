@@ -4,8 +4,18 @@ mat-toolbar {
 }
 
 .header__right {
+	display: flex;
+	align-items: center;
 	& > *:not(:last-child) {
-		margin-right: 10px;
+		margin-right: 20px;
+	}
+	.header__right__flags {
+		a {
+			text-decoration: none;
+		}
+		& > *:not(:last-child) {
+			margin-right: 0.5em;
+		}
 	}
 }
 .header__author {
