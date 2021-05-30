@@ -9,6 +9,5 @@ import { Slot } from '@model/slot';
 })
 export class SlotComponent {
 	@Input() slot: Slot;
-	defaultColor = 'white';
 	constructor() {}
 }

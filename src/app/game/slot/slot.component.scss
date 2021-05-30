@@ -1,7 +1,7 @@
 $border-color: #dcf1ff;
 .grid__column__slot {
+	position: relative;
 	background-color: #f2fdfd;
-
 	border: 1px solid $border-color;
 	height: 100%;
 	display: flex;
@@ -9,11 +9,30 @@ $border-color: #dcf1ff;
 	align-items: center;
 	flex: none;
 
-	.grid__column__slot__coin {
+	& > svg {
 		margin: min(1.5vw, 10px);
-		&:not(.filled) {
-			border: 1px dotted $border-color;
-			border-radius: 50%;
-		}
+	}
+
+	.grid__column__slot__hole {
+		border: 1px dotted $border-color;
+		border-radius: 50%;
+	}
+	.grid__column__slot__coin {
+		position: absolute;
+		top: 0;
+		left: 0;
+		animation: 0.5s cubic-bezier(0.8, 1.35, 0.12, 0.88) SlidingAnimation;
+		z-index: 1;
+	}
+}
+
+@keyframes SlidingAnimation {
+	0% {
+		opacity: 0;
+		transform: translateY(-30vmin);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
